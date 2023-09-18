@@ -13,10 +13,10 @@ import { Todo } from '../models/Todo';
 
 export default function CheckboxList() {
     const [myListItems, setMyListItems] = React.useState<Todo[]>([
-        { description: 'Task 1', completed: false },
-        { description: 'Task 2', completed: false },
-        { description: 'Task 3', completed: false },
-        { description: 'Task 4', completed: false },
+        { id: 1, description: 'Task 1', completed: false },
+        { id: 2, description: 'Task 2', completed: false },
+        { id: 3, description: 'Task 3', completed: false },
+        { id: 4, description: 'Task 4', completed: false },
       ]);
 
   const handleToggle = (currentIndex: number) => () => {
@@ -55,7 +55,7 @@ export default function CheckboxList() {
                   inputProps={{ 'aria-labelledby': labelId }}
                 />
               </ListItemIcon>
-              <ListItemText id={labelId} primary={`Line item ${index + 1}`} />
+              <ListItemText id={labelId} primary={item.description} />
             </ListItemButton>
           </ListItem>
         );

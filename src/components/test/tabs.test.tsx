@@ -15,14 +15,21 @@ describe('ColorTabs', () => {
       render(<ColorTabs />);
       
       // Check if the "Add" icon tab is initially rendered
-      expect(screen.getByLabelText('add')).toBeTruthy();
+      const addButton = screen.getByLabelText('add')
+      expect(addButton).toBeTruthy();
+
+      // Click the "Add" icon and create a new tab
+      fireEvent.click(addButton)
+      //expect you are focused on an empty input 
+      // type in the input
+      // press enter
+      // expect a new tab
     });
   
     it('should change tabs when clicked', () => {
       render(<ColorTabs />);
       
       // Get the tabs
-      
       const allTab = screen.getByText('All');
       const todayTab = screen.getByText('Today');
       const workTab = screen.getByText('Work');
