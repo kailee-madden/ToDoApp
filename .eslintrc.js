@@ -1,13 +1,17 @@
 module.exports = {
   parser: '@typescript-eslint/parser', // Specifies the ESLint parser
   parserOptions: {
-      ecmaVersion: 2021, // Allows for the parsing of modern ECMAScript features
-      sourceType: 'module', // Allows for the use of imports
-  },
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+   },
   ignorePatterns: ['generated'],
   extends: [
-      'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
+      'plugin:@typescript-eslint/strict-type-checked', 
+      'plugin:@typescript-eslint/stylistic-type-checked',
       'plugin:prettier/recommended',
+      'plugin:react/jsx-runtime',
+      'plugin:react/recommended'
   ],
   rules: {
       'linebreak-style': 'off',
