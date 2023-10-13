@@ -11,5 +11,5 @@ test('renders App component with ColorTabs and CheckboxList', () => {
 
   // Check if the CheckboxList component is rendered
   const checkboxList = screen.getByTestId('checkbox-list'); // Add data-testid="checkbox-list" to your CheckboxList component
-  expect(checkboxList).toBeTruthy();
+  expect(checkboxList).toBeTruthy(); // to test
 });
