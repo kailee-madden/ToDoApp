@@ -1,0 +1,26 @@
+name: Test and Lint
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  linting:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout under $GITHUB_WORKSPACE
+        uses: actions/checkout@main
+      - name: Lint
+        run: yarn lint
+  run-tests:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout under $GITHUB_WORKSPACE
+        uses: actions/checkout@main
+      - name: Install dependencies
+        run: yarn
+      - name: Run Tests
+        run: yarn test
