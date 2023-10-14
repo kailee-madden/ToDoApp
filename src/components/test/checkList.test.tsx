@@ -1,5 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import CheckboxList from '../checkList';
+import React from 'react'
 
 test('should toggle checkboxes when clicked', async () => {
     render(<CheckboxList />);

@@ -1,5 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import ColorTabs from '../tabs';
+import React from 'react'
 
 describe('ColorTabs', () => {
     it('should render tabs with labels', () => {

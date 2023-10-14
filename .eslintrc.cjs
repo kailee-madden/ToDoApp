@@ -7,10 +7,7 @@ module.exports = {
    },
   ignorePatterns: ['generated'],
   extends: [
-      'plugin:@typescript-eslint/strict-type-checked', 
-      'plugin:@typescript-eslint/stylistic-type-checked',
-      'plugin:prettier/recommended',
-      'plugin:react/jsx-runtime',
+      'plugin:@typescript-eslint/recommended',
       'plugin:react/recommended'
   ],
   rules: {

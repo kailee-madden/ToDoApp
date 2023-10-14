@@ -1,14 +1,14 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { TabsAndTodosState } from "../models/TabsAndTodosState";
-import { Todo } from "../models/Todo";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { TabsAndTodosState } from '../models/TabsAndTodosState';
+import { Todo } from '../models/Todo';
 
 const initialState: TabsAndTodosState = {
-  selectedTab: "default",
+  selectedTab: 'default',
   todos: [],
 };
 
 const tabsAndTodosSlice = createSlice({
-  name: "tabsAndTodos",
+  name: 'tabsAndTodos',
   initialState,
   reducers: {
     selectTab(state, action: PayloadAction<string>) {
