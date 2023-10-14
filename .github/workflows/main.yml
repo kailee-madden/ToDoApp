@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout under $GITHUB_WORKSPACE
         uses: actions/checkout@main
+      - name: Install dependencies
+        run: yarn
       - name: Lint
         run: yarn lint
   run-tests:
